@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any Image.\nAny Question.\nInstant Answers"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="32dp" />
+
+        <!-- Step 1 -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_camera_purple"
+            android:contentDescription="Camera Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 1"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use your camera to take a photo, or pick\nan image from your gallery, file folder or Drive"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="#555555"
+            android:paddingBottom="24dp" />
+
+        <!-- Step 2 -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_question_orange"
+            android:contentDescription="Question Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 2"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ask your question"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="#555555"
+            android:paddingBottom="24dp" />
+
+        <!-- Step 3 -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_answer_green"
+            android:contentDescription="Answer Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 3"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get an answer"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="#555555"
+            android:paddingBottom="40dp" />
+
+        <!-- Get Started Button -->
+        <Button
+            android:id="@+id/get_started_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6A0DAD"
+            android:text="GET STARTED"
+            android:textColor="@android:color/white"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -28,7 +28,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Photowise">
         <activity
-            android:name=".MainActivity"
+            android:name=".LauncherActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,6 +36,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- ✅ Welcome Screen Activity -->
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".IntroStepsActivity" />
+        <!-- ✅ Turbo WebView Activity -->
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

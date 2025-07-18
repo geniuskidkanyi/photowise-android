@@ -5,8 +5,8 @@ import dev.hotwire.core.bridge.BridgeComponentFactory
 import dev.hotwire.core.bridge.KotlinXJsonConverter
 import dev.hotwire.core.config.Hotwire
 import dev.hotwire.navigation.config.registerBridgeComponents
-import dev.hotwire.navigation.destinations.HotwireDestination
 import timber.log.Timber
+import dev.hotwire.core.BuildConfig
 
 class PhotowiseApplication : Application() {
     override fun onCreate() {
@@ -14,7 +14,7 @@ class PhotowiseApplication : Application() {
 
         // Initialize Timber for logging
         Timber.plant(Timber.DebugTree())
-
+        Hotwire.config.debugLoggingEnabled = BuildConfig.DEBUG
         // Initialize Hotwire
         Hotwire.config.debugLoggingEnabled = true
         Hotwire.config.jsonConverter = KotlinXJsonConverter()
@@ -22,7 +22,7 @@ class PhotowiseApplication : Application() {
         // Register the speech bridge component factory
         Hotwire.registerBridgeComponents(
             BridgeComponentFactory("speech") { name, delegate ->
-                TurboSpeechBridge(this, delegate)
+                SpeechComponent(this, delegate)
             }
         )
     }

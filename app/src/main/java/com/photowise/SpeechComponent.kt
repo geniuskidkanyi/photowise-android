@@ -17,7 +17,8 @@ import org.json.JSONArray
 import org.json.JSONObject
 import timber.log.Timber
 
-class TurboSpeechBridge(
+
+class SpeechComponent(
     private val context: Context,
     delegate: BridgeDelegate<HotwireDestination>
 ) : BridgeComponent<HotwireDestination>("speech", delegate) {
@@ -38,6 +39,7 @@ class TurboSpeechBridge(
     )
 
     override fun onReceive(message: Message) {
+
         try {
             val data = parseMessageData(message.jsonData)
             if (data == null) {
